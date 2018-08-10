@@ -1,0 +1,99 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no,width=500" />
+    <title>Freebox OS :: Identification</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./freebox.css">
+    <!--<script src="resources/js/jquery.min.js?v=be9c793d33fbff2cc61b173346d50188eec4261f"></script>
+    <script src="resources/js/hmac-sha1.min.js?v=317ad5b72d6a60c2b67368ca1d7f79351ff3e493"></script>
+    <script src="resources/js/login.min.js?v=b565c09725dbaa351259f9f9889c41fc082587d8"></script>-->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+
+        (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://statsweb.proxad.net/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "8"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+</head>
+<body>
+  <div id="content">
+
+    <div class="fbxos-logo">
+      <img src="./logo_freeboxos.png" alt="logo Freebox OS" id="logo_freeboxos"/>
+      <div class="fbxos-version">
+        <div class="fbxos-version-sprite fbxos-version-v3"></div>
+        <div class="fbxos-version-sprite fbxos-version-dot"></div>
+        <div class="fbxos-version-sprite fbxos-version-v5"></div>
+      </div>
+    </div>
+
+    <div role="alert" id="browserWarning">
+      Votre navigateur internet est ancien et Freebox OS risque de ne pas fonctionner correctement. <br />
+      Pour une meilleure expérience nous vous recommandons de mettre à jour votre navigateur. <br />
+      Vous pouvez par exemple installer : <br />
+      <div class="linklist">
+        <div><a href="https://www.google.fr/intl/fr/chrome/browser/desktop/index.html">Google Chrome</a></div>
+        <div><a href="https://www.mozilla.org/fr/firefox/new/">Mozilla Firefox</a></div>
+      </div>
+    </div>
+
+    
+          <div role="alert" id="diskFull">
+            L'espace disque restant sur votre Freebox est faible.<br />
+            Certains services risquent de ne pas fonctionner correctement si votre disque est plein. <br />
+          </div>
+          
+        
+
+    <div role="banner" id="mobileInfoLogin">
+        <h3>Freebox Compagnon</h3>
+        <h5>Pour un meilleur confort d'utilisation téléchargez l'application mobile Freebox Compagnon</h5>
+        <div>
+            <a href="https://itunes.apple.com/fr/app/freebox-compagnon/id529497059?mt=8" style="float: left;">
+                <img src="resources/images/fbx/app_store.png" style="width: 135px; height: 40px; margin: 5px;" alt="App Store" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=fr.freebox.android.compagnon" style="float: left;">
+                <img src="resources/images/fbx/play_store.png" style="width: 129px; height: 45px; margin: 2px;" alt="Google Play" />
+            </a>
+            <div style="clear: both;"></div>
+            <a href="javascript:dismissMobileInfo()">Continuer avec la version web</a>
+        </div>
+    </div>
+
+      
+        <form id="login-form" action="/" method="POST">
+          <div id="formContent">
+            <h3>Authentification</h3>
+            <h5>Veuillez saisir votre clé WPA.</h5>
+            <input type="text" name="login" value="freebox" style="display: none;" />
+            <input tabindex="1" aria-required="true" type="password" class="password" name="password_" id="fbx-password" value="" aria-label="Mot de passe" />
+            <input tabindex="2" role="button" type="submit" class="submit-btn" value="Connexion"/>
+            <div tabindex="3" role="alert" aria-live="assertive" aria-atomic="true" id="errorMsg"></div>
+          </div>
+        </form>
+        
+
+        <div id="loadingInfo" class="step" style="display: none;">
+          <h3>Chargement en cours ...</h3>
+          <div id="loading">
+            <div id="loadPct">0%</div>
+            <div id="loadContent"></div>
+            <div style="clear: both;"> </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">//<!--
+        loadFile("resources/js/freeboxos.min.js?v=f6a4bad7adc11bddc9bb467eaa05aa3d9cc6d23e");
+        //--></script>
+    
+  </div>
+</body>
+</html>
